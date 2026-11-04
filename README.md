@@ -6,7 +6,7 @@ Site estático (HTML, CSS e JavaScript puros) hospedado no GitHub Pages, com o m
 
 - **Hero** com o log simulado de uma execução do Maestro
 - **Maestro** em destaque: arquitetura (Django, Celery, Redis, Channels e agente em Go) e principais recursos
-- **Projetos** com filtro (Django/Backend, RPA, Dados) e atividade recente puxada ao vivo da API pública do GitHub
+- **Automações** (foco principal) com filtro por ferramenta e tema, seção de **backend** (Blog, E-commerce, Eco) e atividade recente puxada ao vivo da API pública do GitHub
 - **Stack**, **trajetória** e **certificados**
 - Contato, responsivo, com suporte a `prefers-reduced-motion`
 

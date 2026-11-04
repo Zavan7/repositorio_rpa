@@ -795,6 +795,28 @@ svg {
   text-decoration: underline;
 }
 
+.pcard .go-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  margin-top: auto;
+  padding-top: 1.4rem;
+}
+
+.pcard .go-row a {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent-text);
+}
+
+.pcard .go-row a:hover {
+  text-decoration: underline;
+}
+
+.tool {
+  color: var(--accent-text);
+}
+
 .pcard .go.off {
   color: var(--text-muted);
 }
