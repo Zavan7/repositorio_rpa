@@ -26,7 +26,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css?v=20261104" />
+    <link rel="stylesheet" href="style.css?v=20261104b" />
     <script>
       document.documentElement.classList.add("js");
     </script>
@@ -54,7 +54,7 @@
 
         <div class="menu" id="menu">
           <a href="#maestro">Maestro</a>
-          <a href="#projetos">Projetos</a>
+          <a href="#automacoes">Automações</a>
           <a href="#stack">Stack</a>
           <a href="#trajetoria">Trajetória</a>
           <a href="#certificados">Certificados</a>
@@ -329,95 +329,106 @@
         </div>
       </section>
 
-      <!-- ================= PROJETOS ================= -->
-      <section class="section alt" id="projetos">
+      <!-- ================= AUTOMAÇÕES ================= -->
+      <section class="section alt" id="automacoes">
         <div class="wrap">
           <div class="section-head reveal">
-            <p class="eyebrow">ls projetos/</p>
-            <h2>Mais do que scripts soltos</h2>
+            <p class="eyebrow">ls automacoes/</p>
+            <h2>Automações: o meu foco</h2>
             <p>
-              Projetos maiores em Django e automações em Python com
-              arquitetura: Page Object, SOLID, códigos de saída e logs
-              estruturados.
+              Robôs que acessam sistemas, tratam dados e entregam resultado,
+              com Page Object, SOLID, logs estruturados e execuções
+              registradas em banco. Do desafio simples ao fluxo completo.
             </p>
           </div>
 
-          <div class="filters" role="group" aria-label="Filtrar projetos">
-            <button class="chip" data-f="todos" aria-pressed="true">Todos</button>
-            <button class="chip" data-f="django" aria-pressed="false">Django / Backend</button>
-            <button class="chip" data-f="rpa" aria-pressed="false">RPA</button>
-            <button class="chip" data-f="dados" aria-pressed="false">Dados</button>
+          <div class="filters" role="group" aria-label="Filtrar automações">
+            <button class="chip" data-f="todos" aria-pressed="true">Todas</button>
+            <button class="chip" data-f="playwright" aria-pressed="false">Playwright</button>
+            <button class="chip" data-f="selenium" aria-pressed="false">Selenium</button>
+            <button class="chip" data-f="dados" aria-pressed="false">Dados e banco</button>
+            <button class="chip" data-f="arquitetura" aria-pressed="false">Arquitetura</button>
           </div>
 
           <div class="projects">
-            <article class="pcard reveal" data-c="django">
+            <article class="pcard reveal" data-c="selenium dados arquitetura">
               <div class="pmeta">
-                <span>blog-zvlabs</span>
-                <span class="state wip">em desenvolvimento</span>
+                <span>Diario-de-Bordo</span>
+                <span class="tool">Selenium + pandas</span>
               </div>
-              <h3>Blog ZV Labs</h3>
+              <h3>Diário de Bordo: extração e consolidação de dados</h3>
               <p>
-                Blog em Django com posts em Markdown sanitizado, login só por
-                OAuth 2.0 (Google e GitHub), comentários com moderação e e-mail
-                automático para inscritos a cada post.
+                Robô que entra no sistema, extrai as informações de campanhas para Excel, trata e filtra a base e gera o relatório final consolidado. Organizado com Page Objects e logging.
               </p>
               <div class="tags">
-                <span class="tag">Django</span>
-                <span class="tag">allauth</span>
-                <span class="tag">OAuth 2.0</span>
-                <span class="tag">nh3</span>
+                <span class="tag">Selenium</span>
+                <span class="tag">pandas</span>
+                <span class="tag">Excel</span>
+                <span class="tag">Page Object</span>
+                <span class="tag">Logging</span>
               </div>
-              <a class="go" href="https://github.com/Zavan7/blog-zvlabs" target="_blank" rel="noopener">repositório →</a>
+              <a class="go" href="https://github.com/Zavan7/Diario-de-Bordo" target="_blank" rel="noopener">repositório →</a>
             </article>
-
-            <article class="pcard reveal" data-c="django">
+            <article class="pcard reveal" data-c="selenium dados">
               <div class="pmeta">
-                <span>e-comerce</span>
-                <span class="state wip">em construção</span>
+                <span>Automa-o-Download-via-CRM</span>
+                <span class="tool">Selenium</span>
               </div>
-              <h3>E-commerce de joias</h3>
+              <h3>Download automatizado de relatórios via CRM</h3>
               <p>
-                Loja em Django com cadastro de clientes, integração com API de
-                pagamento e foco em segurança e arquitetura escalável.
+                Faz login, navega até o menu, aplica filtros, limpa a pasta de destino e baixa o relatório sozinho, com log detalhado de cada etapa. Elimina um processo manual repetitivo.
               </p>
               <div class="tags">
-                <span class="tag">Django</span>
-                <span class="tag">Pagamentos</span>
-                <span class="tag">Segurança</span>
+                <span class="tag">Selenium</span>
+                <span class="tag">Page Object</span>
+                <span class="tag">Logging</span>
+                <span class="tag">.env</span>
               </div>
-              <a class="go" href="https://github.com/Zavan7/e-comerce" target="_blank" rel="noopener">repositório →</a>
+              <a class="go" href="https://github.com/Zavan7/Automa-o-Download-via-CRM" target="_blank" rel="noopener">repositório →</a>
             </article>
-
-            <article class="pcard reveal" data-c="django">
+            <article class="pcard reveal" data-c="selenium arquitetura dados">
               <div class="pmeta">
-                <span>Eco</span>
-                <span class="state wip">em desenvolvimento</span>
+                <span>RPA-Challenge-3.0</span>
+                <span class="tool">Selenium + MongoDB</span>
               </div>
-              <h3>Eco: microsserviço de notificações</h3>
+              <h3>RPA Challenge 3.0: resiliência e persistência</h3>
               <p>
-                Serviço em FastAPI que centraliza os avisos do Maestro. O
-                primeiro passo é o e-mail de falha definitiva do robô, já
-                pensado para migrar para o serviço.
+                Automação com POO e Page Object Model, logging estruturado, tratamento de exceções e execuções gravadas no MongoDB. Refeita com outra ferramenta para comparar abordagens.
               </p>
               <div class="tags">
-                <span class="tag">FastAPI</span>
-                <span class="tag">Microsserviço</span>
-                <span class="tag">Maestro</span>
+                <span class="tag">Selenium</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">POO</span>
+                <span class="tag">Logging</span>
+                <span class="tag">uv</span>
               </div>
-              <span class="go off">sem repositório público ainda</span>
+              <a class="go" href="https://github.com/Zavan7/RPA-Challenge-3.0" target="_blank" rel="noopener">repositório →</a>
             </article>
-
-            <article class="pcard reveal" data-c="rpa">
+            <article class="pcard reveal" data-c="playwright dados">
+              <div class="pmeta">
+                <span>RPA-Challenge-2.0</span>
+                <span class="tool">Playwright + pandas</span>
+              </div>
+              <h3>RPA Challenge 2.0: do Excel ao formulário</h3>
+              <p>
+                Baixa um arquivo Excel, lê os dados com pandas e preenche o formulário do site automaticamente, com logs em arquivos rotativos e Dockerfile.
+              </p>
+              <div class="tags">
+                <span class="tag">Playwright</span>
+                <span class="tag">pandas</span>
+                <span class="tag">openpyxl</span>
+                <span class="tag">Docker</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/RPA-Challenge-2.0" target="_blank" rel="noopener">repositório →</a>
+            </article>
+            <article class="pcard reveal" data-c="playwright arquitetura">
               <div class="pmeta">
                 <span>desafio_rpa_seis</span>
-                <span class="state">atualizado em nov/2026</span>
+                <span class="tool">Playwright</span>
               </div>
-              <h3>RPA com SOLID (SRP)</h3>
+              <h3>RPA com SOLID (Responsabilidade Única)</h3>
               <p>
-                Robô em Playwright que aplica Responsabilidade Única de ponta a
-                ponta: configuração de navegador, serviço, Page Objects e
-                tratamento de erros que vira código de saída para o
-                orquestrador.
+                Cada parte do robô tem uma responsabilidade: configuração do navegador, serviço, Page Objects e erros que viram código de saída para o orquestrador. Tem modo debug por variável de ambiente.
               </p>
               <div class="tags">
                 <span class="tag">Playwright</span>
@@ -427,33 +438,99 @@
               </div>
               <a class="go" href="https://github.com/Zavan7/desafio_rpa_seis" target="_blank" rel="noopener">repositório →</a>
             </article>
-
-            <article class="pcard reveal" data-c="rpa">
+            <article class="pcard reveal" data-c="playwright arquitetura">
               <div class="pmeta">
-                <span>RPA-Challenge-3.0</span>
-                <span class="state">atualizado em set/2026</span>
+                <span>desafio_rpa_cinco</span>
+                <span class="tool">Playwright</span>
               </div>
-              <h3>RPA Challenge 3.0</h3>
+              <h3>Exceções de interação em elementos</h3>
               <p>
-                Terceira etapa da minha série de desafios de automação web em
-                Python, evoluindo a organização do código a cada versão.
+                Trata <code>ElementNotInteractable</code> e <code>InvalidElementState</code>: dois botões com o mesmo nome, um invisível, e um campo que só habilita após clicar em Editar.
               </p>
               <div class="tags">
-                <span class="tag">Python</span>
                 <span class="tag">Playwright</span>
+                <span class="tag">Exceções</span>
+                <span class="tag">Page Object</span>
               </div>
-              <a class="go" href="https://github.com/Zavan7/RPA-Challenge-3.0" target="_blank" rel="noopener">repositório →</a>
+              <a class="go" href="https://github.com/Zavan7/desafio_rpa_cinco" target="_blank" rel="noopener">repositório →</a>
             </article>
-
-            <article class="pcard reveal" data-c="rpa">
+            <article class="pcard reveal" data-c="playwright dados">
+              <div class="pmeta">
+                <span>desafio_rpa_quatro</span>
+                <span class="tool">Playwright + MongoDB</span>
+              </div>
+              <h3>Sincronização com auto-waiting</h3>
+              <p>
+                Resolve elementos que demoram a renderizar usando a espera automática do Playwright, em vez de pausas fixas, e registra as execuções em MongoDB e em logs.
+              </p>
+              <div class="tags">
+                <span class="tag">Playwright</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Logging</span>
+                <span class="tag">uv</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/desafio_rpa_quatro" target="_blank" rel="noopener">repositório →</a>
+            </article>
+            <article class="pcard reveal" data-c="playwright dados">
+              <div class="pmeta">
+                <span>desafio_rpa_dois / tres</span>
+                <span class="tool">Playwright + MongoDB</span>
+              </div>
+              <h3>Validação de falhas de login</h3>
+              <p>
+                Simula tentativas de login inválidas e confere as mensagens de erro, com logs em JSON, configuração por variáveis de ambiente e gravação opcional em MongoDB.
+              </p>
+              <div class="tags">
+                <span class="tag">Playwright</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">logs JSON</span>
+                <span class="tag">.env</span>
+              </div>
+              <div class="go-row">
+                <a href="https://github.com/Zavan7/desafio_rpa_dois" target="_blank" rel="noopener">desafio 2 →</a>
+                <a href="https://github.com/Zavan7/desafio_rpa_tres" target="_blank" rel="noopener">desafio 3 →</a>
+              </div>
+            </article>
+            <article class="pcard reveal" data-c="playwright">
+              <div class="pmeta">
+                <span>desafio_rpa</span>
+                <span class="tool">Playwright</span>
+              </div>
+              <h3>Cenários E2E: login, exceções e filtros</h3>
+              <p>
+                Conjunto de cenários de teste de ponta a ponta: login positivo e negativo, falhas comuns de interface dinâmica, filtros combinados, ordenação e reset.
+              </p>
+              <div class="tags">
+                <span class="tag">Playwright</span>
+                <span class="tag">E2E</span>
+                <span class="tag">Assertions</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/desafio_rpa" target="_blank" rel="noopener">repositório →</a>
+            </article>
+            <article class="pcard reveal" data-c="selenium dados">
+              <div class="pmeta">
+                <span>TesteRPA</span>
+                <span class="tool">Selenium + MongoDB</span>
+              </div>
+              <h3>Primeiro robô: Google até o instalador do Python</h3>
+              <p>
+                Pesquisa no Google, acessa o site oficial do Python, localiza a versão 3.11.9 e baixa o instalador, enviando o relatório da execução ao MongoDB. Foi o ponto de partida.
+              </p>
+              <div class="tags">
+                <span class="tag">Selenium</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">PyMongo</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/TesteRPA" target="_blank" rel="noopener">repositório →</a>
+            </article>
+            <article class="pcard reveal" data-c="arquitetura">
               <div class="pmeta">
                 <span>rpa_poo</span>
-                <span class="state">atualizado em jun/2026</span>
+                <span class="tool">Estudo</span>
               </div>
-              <h3>RPA com orientação a objetos</h3>
+              <h3>Orientação a objetos aplicada a robôs</h3>
               <p>
-                Estudo de RPA com programação orientada a objetos: classes com
-                responsabilidades claras no lugar de um script único e longo.
+                Material de estudo sobre classes, objetos, atributos e herança, e como essa base organiza uma automação em vez de um script longo.
               </p>
               <div class="tags">
                 <span class="tag">Python</span>
@@ -461,60 +538,6 @@
                 <span class="tag">Clean Code</span>
               </div>
               <a class="go" href="https://github.com/Zavan7/rpa_poo" target="_blank" rel="noopener">repositório →</a>
-            </article>
-
-            <article class="pcard reveal" data-c="rpa dados">
-              <div class="pmeta">
-                <span>Automa-o-Download-via-CRM</span>
-                <span class="state">atualizado em nov/2025</span>
-              </div>
-              <h3>Download automatizado via CRM</h3>
-              <p>
-                Robô que acessa o CRM, executa o fluxo e baixa os arquivos
-                automaticamente, eliminando um processo manual repetitivo.
-              </p>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">Playwright</span>
-                <span class="tag">RPA</span>
-              </div>
-              <a class="go" href="https://github.com/Zavan7/Automa-o-Download-via-CRM" target="_blank" rel="noopener">repositório →</a>
-            </article>
-
-            <article class="pcard reveal" data-c="rpa dados">
-              <div class="pmeta">
-                <span>TesteRPA</span>
-                <span class="state">atualizado em dez/2024</span>
-              </div>
-              <h3>Monitoramento com MongoDB</h3>
-              <p>
-                Registro de execuções, logs e status das automações em
-                MongoDB, rodando em containers Docker.
-              </p>
-              <div class="tags">
-                <span class="tag">MongoDB</span>
-                <span class="tag">Docker</span>
-                <span class="tag">Logging</span>
-              </div>
-              <a class="go" href="https://github.com/Zavan7/TesteRPA" target="_blank" rel="noopener">repositório →</a>
-            </article>
-
-            <article class="pcard reveal" data-c="rpa">
-              <div class="pmeta">
-                <span>RPA-Challenge-2.0</span>
-                <span class="state">atualizado em dez/2025</span>
-              </div>
-              <h3>RPA Challenge 2.0</h3>
-              <p>
-                Resolução de desafios de automação web com Python, Playwright e
-                arquitetura Page Object.
-              </p>
-              <div class="tags">
-                <span class="tag">Python</span>
-                <span class="tag">Playwright</span>
-                <span class="tag">Page Object</span>
-              </div>
-              <a class="go" href="https://github.com/Zavan7/RPA-Challenge-2.0" target="_blank" rel="noopener">repositório →</a>
             </article>
           </div>
 
@@ -524,6 +547,72 @@
               <span class="term-title">~/github $ atividade recente (ao vivo, via API pública)</span>
             </div>
             <div class="term-body" id="activityBody"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= BACKEND ================= -->
+      <section class="section" id="backend">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">ls backend/</p>
+            <h2>Além do RPA: produtos em backend</h2>
+            <p>
+              Onde aplico o que aprendo nas automações: Django, FastAPI,
+              autenticação e segurança.
+            </p>
+          </div>
+
+          <div class="projects">
+            <article class="pcard reveal">
+              <div class="pmeta">
+                <span>blog-zvlabs</span>
+                <span class="state wip">em desenvolvimento</span>
+              </div>
+              <h3>Blog ZV Labs</h3>
+              <p>
+                Blog em Django com posts em Markdown sanitizado, login só por OAuth 2.0 (Google e GitHub), comentários com moderação e e-mail automático para inscritos a cada post.
+              </p>
+              <div class="tags">
+                <span class="tag">Django</span>
+                <span class="tag">allauth</span>
+                <span class="tag">OAuth 2.0</span>
+                <span class="tag">nh3</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/blog-zvlabs" target="_blank" rel="noopener">repositório →</a>
+            </article>
+            <article class="pcard reveal">
+              <div class="pmeta">
+                <span>e-comerce</span>
+                <span class="state wip">em construção</span>
+              </div>
+              <h3>E-commerce de joias</h3>
+              <p>
+                Loja em Django com cadastro de clientes, integração com API de pagamento e foco em segurança e arquitetura escalável.
+              </p>
+              <div class="tags">
+                <span class="tag">Django</span>
+                <span class="tag">Pagamentos</span>
+                <span class="tag">Segurança</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/e-comerce" target="_blank" rel="noopener">repositório →</a>
+            </article>
+            <article class="pcard reveal">
+              <div class="pmeta">
+                <span>Eco</span>
+                <span class="state wip">em desenvolvimento</span>
+              </div>
+              <h3>Eco: microsserviço de notificações</h3>
+              <p>
+                Serviço em FastAPI que centraliza os avisos do Maestro. O primeiro passo é o e-mail de falha definitiva do robô, já pensado para migrar para o serviço.
+              </p>
+              <div class="tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">Microsserviço</span>
+                <span class="tag">Maestro</span>
+              </div>
+              <span class="go off">sem repositório público ainda</span>
+            </article>
           </div>
         </div>
       </section>
@@ -763,6 +852,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20261104"></script>
+    <script src="script.js?v=20261104b"></script>
   </body>
 </html>
