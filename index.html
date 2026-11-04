@@ -4,496 +4,765 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Vitor Zavan | Python & RPA</title>
-    <link rel="icon" type="image.png" href="images/rpa_zavan.png" />
-
+    <title>Vitor Zavan | Desenvolvedor Python · RPA · Backend</title>
     <meta
       name="description"
-      content="Portfólio profissional focado em Python, RPA, automação e desenvolvimento de software."
+      content="Portfólio de Vitor Zavan, desenvolvedor Python focado em RPA e backend. Maestro, orquestrador de automações em Django, Celery, Redis, WebSocket e agente em Go."
     />
+    <meta name="theme-color" content="#17212f" />
+    <link rel="icon" type="image/svg+xml" href="images/logo-mark.svg" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vitor Zavan | Python · RPA · Backend" />
+    <meta
+      property="og:description"
+      content="Maestro: orquestrador de automações RPA em Django, com agente em Go. Projetos, stack e trajetória."
+    />
+    <meta name="twitter:card" content="summary" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
   </head>
 
   <body>
-    <!-- Cabeçalho -->
+    <a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
     <header class="header">
-      <nav class="navbar container">
-        <a href="#inicio" class="logo">
-          <span>&lt;</span>Vitor Zavan<span>/&gt;</span>
+      <nav class="nav wrap" aria-label="Principal">
+        <a class="brand" href="#inicio">
+          <img src="images/logo-mark.svg" alt="" width="34" height="34" />
+          <span>vitor.zavan <small>/ zv labs</small></span>
         </a>
 
-        <ul class="menu">
-          <li>
-            <a href="#sobre">Sobre</a>
-          </li>
+        <button
+          class="nav-toggle"
+          id="navToggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          ☰
+        </button>
 
-          <li>
-            <a href="#habilidades">Habilidades</a>
-          </li>
-
-          <li>
-            <a href="#projetos">Projetos</a>
-          </li>
-
-          <li>
-            <a href="#experiencia">Experiência</a>
-          </li>
-
-          <li>
-            <a href="#contato">Contato</a>
-          </li>
-        </ul>
+        <div class="menu" id="menu">
+          <a href="#maestro">Maestro</a>
+          <a href="#projetos">Projetos</a>
+          <a href="#stack">Stack</a>
+          <a href="#trajetoria">Trajetória</a>
+          <a href="#certificados">Certificados</a>
+          <a class="btn btn-primary" href="#contato">Contato</a>
+        </div>
       </nav>
     </header>
 
-    <!-- Seção inicial -->
-    <main>
-      <section id="inicio" class="hero">
-        <div class="container hero-content">
-          <div class="hero-text">
-            <p class="terminal-text">
-              <span>➜</span> python developer & rpa specialist
-            </p>
+    <main id="conteudo">
+      <!-- ================= HERO ================= -->
+      <section class="hero" id="inicio">
+        <div class="wrap hero-grid">
+          <div>
+            <span class="status"
+              ><i class="pulse"></i> online · construindo na ZV Labs</span
+            >
 
             <h1>
-              Automatizando processos
-              <span>com Python.</span>
+              Automação que roda em produção,
+              <em>não só no meu notebook.</em>
             </h1>
 
-            <p class="hero-description">
-              Desenvolvo soluções de automação robustas, escaláveis e orientadas
-              a resultados, utilizando Python, Playwright, APIs e boas práticas
-              de engenharia de software.
+            <p class="hero-sub">
+              Sou o Vitor, desenvolvedor <strong>Python</strong> com foco em
+              <strong>RPA e backend</strong>. Construo robôs, orquestro a
+              execução deles e cuido do que costuma ficar de fora:
+              <strong>segurança, logs, tentativas e testes</strong>.
             </p>
 
-            <div class="hero-buttons">
-              <a href="#projetos" class="button button-primary">
-                Ver projetos
-              </a>
+            <div class="cta">
+              <a class="btn btn-primary" href="#maestro">Ver o Maestro →</a>
+              <a
+                class="btn"
+                href="https://www.linkedin.com/in/vitor-zavan-831907297/"
+                target="_blank"
+                rel="noopener"
+                >LinkedIn</a
+              >
+              <a
+                class="btn"
+                href="https://github.com/Zavan7"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
 
-              <a href="#contato" class="button button-secondary">
-                Entrar em contato
-              </a>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Django</span>
+              <span class="tag">Celery + Redis</span>
+              <span class="tag">WebSocket</span>
+              <span class="tag">Go</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Docker</span>
             </div>
           </div>
 
-          <div class="code-window">
-            <div class="window-header">
-              <div class="window-buttons">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
-
-              <p>automation.py</p>
+          <div class="term" aria-label="Simulação do log de uma execução no Maestro">
+            <div class="term-bar">
+              <div class="dots"><i></i><i></i><i></i></div>
+              <span class="term-title">maestro — execução #1042 (log ao vivo)</span>
             </div>
-
-            <pre>
-<code>
-<span class="purple">class</span> <span class="yellow">AutomationEngineer</span>:
-
-    <span class="purple">def</span> <span class="blue">__init__</span>(self):
-
-        self.language = <span class="green">"Python"</span>
-
-        self.focus = [
-            <span class="green">"RPA"</span>,
-            <span class="green">"Automation"</span>,
-            <span class="green">"Software Engineering"</span>
-        ]
-
-
-    <span class="purple">def</span> <span class="blue">build_solution</span>(self):
-
-        <span class="purple">return</span> <span class="green">"Efficient and scalable"</span>
-
-
-developer = <span class="yellow">AutomationEngineer</span>()
-
-print(
-    developer.build_solution()
-)
-</code>
-                    </pre>
+            <div class="term-body" id="heroTerm" aria-live="off"></div>
           </div>
         </div>
       </section>
 
-      <!-- Sobre -->
-      <section id="sobre" class="section">
-        <div class="container">
-          <div class="section-title">
-            <p>01. SOBRE MIM</p>
+      <!-- ================= NÚMEROS ================= -->
+      <div class="kpis">
+        <div class="wrap kpis-grid">
+          <div class="kpi">
+            <b id="kpiRepos">19</b>
+            <span>repositórios públicos</span>
+          </div>
+          <div class="kpi">
+            <b>v1.1.0</b>
+            <span>Maestro, com changelog</span>
+          </div>
+          <div class="kpi">
+            <b>Python + Go</b>
+            <span>orquestrador e agente</span>
+          </div>
+          <div class="kpi">
+            <b>2025 →</b>
+            <span>RPA em ambiente real (HCosta)</span>
+          </div>
+        </div>
+      </div>
 
-            <h2>
-              Transformando tarefas repetitivas em
-              <span>soluções inteligentes.</span>
-            </h2>
+      <!-- ================= MAESTRO ================= -->
+      <section class="section" id="maestro">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">projeto principal</p>
+            <h2>Maestro: orquestrador de automações RPA</h2>
+            <p>
+              Um sistema que cadastra, executa, agenda e audita robôs. Foi
+              pensado como produto: perfis de acesso, execução isolada, log ao
+              vivo, retentativas e agente próprio para rodar na máquina do
+              cliente.
+            </p>
           </div>
 
-          <div class="about-grid">
-            <div class="about-text">
-              <p>
-                Sou desenvolvedor com foco em
-                <strong>Python, RPA e automação de processos</strong>. Busco
-                criar soluções que reduzam atividades manuais, aumentem a
-                produtividade e tornem os processos mais confiáveis.
-              </p>
+          <div class="feature">
+            <div class="feature-top">
+              <div class="panel reveal">
+                <div class="maestro-head">
+                  <img src="images/logo-mark.svg" alt="Logo do Maestro" />
+                  <div>
+                    <h3>Maestro <span class="badge">v1.1.0</span></h3>
+                    <span class="c-muted" style="font-family: var(--font-mono); font-size: 0.74rem"
+                      >primeiro produto da ZV Labs</span
+                    >
+                  </div>
+                </div>
 
-              <p>
-                Tenho experiência com automação web, tratamento de dados,
-                integração entre sistemas e desenvolvimento de aplicações
-                utilizando boas práticas de código, arquitetura de software e
-                padrões de projeto.
-              </p>
+                <p>
+                  Django no centro, Celery e Redis para executar em segundo
+                  plano, Channels para entregar o log em tempo real e um
+                  <strong>agente em Go</strong> que roda os robôs onde eles
+                  precisam estar. O repositório traz README com tutorial em
+                  Docker, CHANGELOG, protocolo do agente documentado e testes.
+                </p>
 
-              <p>
-                Meu objetivo é desenvolver automações escaláveis, fáceis de
-                manter e preparadas para evoluir conforme as necessidades do
-                negócio.
-              </p>
+                <div class="tags">
+                  <span class="tag">Django</span>
+                  <span class="tag">Celery</span>
+                  <span class="tag">Redis</span>
+                  <span class="tag">Channels / Daphne</span>
+                  <span class="tag">Go</span>
+                  <span class="tag">Docker</span>
+                  <span class="tag">django-axes</span>
+                  <span class="tag">uv</span>
+                </div>
+
+                <div class="links">
+                  <a
+                    class="btn btn-primary"
+                    href="https://github.com/Zavan7/maestro-zavan"
+                    target="_blank"
+                    rel="noopener"
+                    >Ver repositório</a
+                  >
+                  <a
+                    class="btn"
+                    href="https://github.com/Zavan7/maestro-zavan/blob/main/CHANGELOG.md"
+                    target="_blank"
+                    rel="noopener"
+                    >Changelog</a
+                  >
+                </div>
+              </div>
+
+              <div class="panel diagram reveal">
+                <svg
+                  viewBox="0 0 560 330"
+                  role="img"
+                  aria-labelledby="dgTitle dgDesc"
+                >
+                  <title id="dgTitle">Arquitetura do Maestro</title>
+                  <desc id="dgDesc">
+                    O navegador fala com o Django e o Daphne por HTTP e
+                    WebSocket. O Django enfileira tarefas no Redis, que
+                    alimenta o worker Celery e o agendador. Um agente em Go
+                    recebe ordens por WebSocket e executa os robôs.
+                  </desc>
+
+                  <defs>
+                    <marker
+                      id="seta"
+                      viewBox="0 0 10 10"
+                      refX="8"
+                      refY="5"
+                      markerWidth="7"
+                      markerHeight="7"
+                      orient="auto-start-reverse"
+                    >
+                      <path d="M0 0 L10 5 L0 10 z" fill="#7b93ff" />
+                    </marker>
+                  </defs>
+
+                  <rect class="dg-box" x="10" y="130" width="120" height="64" rx="8" />
+                  <text class="dg-t" x="70" y="157" text-anchor="middle">Navegador</text>
+                  <text class="dg-s" x="70" y="176" text-anchor="middle">painel + log</text>
+
+                  <rect class="dg-box hot" x="190" y="130" width="140" height="64" rx="8" />
+                  <text class="dg-t" x="260" y="157" text-anchor="middle">Django</text>
+                  <text class="dg-s" x="260" y="176" text-anchor="middle">Daphne · Channels</text>
+
+                  <rect class="dg-box" x="400" y="130" width="130" height="64" rx="8" />
+                  <text class="dg-t" x="465" y="157" text-anchor="middle">Redis</text>
+                  <text class="dg-s" x="465" y="176" text-anchor="middle">fila + canal de log</text>
+
+                  <rect class="dg-box" x="360" y="20" width="170" height="64" rx="8" />
+                  <text class="dg-t" x="445" y="47" text-anchor="middle">Worker Celery</text>
+                  <text class="dg-s" x="445" y="66" text-anchor="middle">+ agendador</text>
+
+                  <rect class="dg-box hot" x="360" y="250" width="170" height="64" rx="8" />
+                  <text class="dg-t" x="445" y="277" text-anchor="middle">Agente em Go</text>
+                  <text class="dg-s" x="445" y="296" text-anchor="middle">roda os robôs Python</text>
+
+                  <path class="dg-e" d="M130 162 H190" marker-end="url(#seta)" marker-start="url(#seta)" />
+                  <path class="dg-e" d="M330 162 H400" marker-end="url(#seta)" />
+                  <path class="dg-e" d="M465 130 V84" marker-end="url(#seta)" />
+                  <path class="dg-e" d="M260 194 V282 H360" marker-end="url(#seta)" marker-start="url(#seta)" />
+
+                  <text class="dg-l" x="160" y="150" text-anchor="middle">HTTP/WS</text>
+                  <text class="dg-l" x="365" y="150" text-anchor="middle">tarefas</text>
+                  <text class="dg-l" x="475" y="112">executa</text>
+                  <text class="dg-l" x="268" y="236">WebSocket + token</text>
+                </svg>
+              </div>
             </div>
 
-            <div class="stats">
-              <div class="stat-card">
-                <h3>Python</h3>
+            <div class="features">
+              <article class="fcard reveal">
+                <h4><span>▸</span> Log ao vivo</h4>
+                <p>
+                  As linhas do robô chegam ao navegador por WebSocket enquanto
+                  ele roda, e o log é gravado a cada 0,5 s para quem abre a
+                  página no meio da execução.
+                </p>
+              </article>
 
-                <p>Automação, dados, APIs e aplicações.</p>
-              </div>
+              <article class="fcard reveal">
+                <h4><span>▸</span> Execução confiável</h4>
+                <p>
+                  Tempo máximo e novas tentativas por robô, status
+                  <em>cancelada</em> e botão "parar" que encerra o processo de
+                  verdade, inclusive navegadores filhos.
+                </p>
+              </article>
 
-              <div class="stat-card">
-                <h3>RPA</h3>
+              <article class="fcard reveal">
+                <h4><span>▸</span> Ambientes isolados</h4>
+                <p>
+                  Cada robô roda no ambiente do próprio gerenciador (uv, poetry,
+                  pdm, pipenv ou pip), detectado pela pasta, com dependências
+                  sincronizadas antes de cada execução.
+                </p>
+              </article>
 
-                <p>Processos automatizados de ponta a ponta.</p>
-              </div>
+              <article class="fcard reveal">
+                <h4><span>▸</span> Segurança desde o início</h4>
+                <p>
+                  Permissões por grupo, bloqueio de login após 5 tentativas
+                  (django-axes), robôs sem acesso ao <code>SECRET_KEY</code> e
+                  HTTPS configurável para produção.
+                </p>
+              </article>
 
-              <div class="stat-card">
-                <h3>Web</h3>
+              <article class="fcard reveal">
+                <h4><span>▸</span> Agente em Go</h4>
+                <p>
+                  Resolve o robô só dentro da pasta aprovada (barra
+                  <code>../</code> e links simbólicos), reenvia o que não
+                  entregou ao reconectar e encerra a árvore de processos.
+                </p>
+              </article>
 
-                <p>Automação com Playwright e Selenium.</p>
-              </div>
-
-              <div class="stat-card">
-                <h3>Dados</h3>
-
-                <p>Excel, CSV, Pandas e SQL.</p>
-              </div>
+              <article class="fcard reveal">
+                <h4><span>▸</span> Agendamento e status</h4>
+                <p>
+                  Agendador dedicado e uma tela de status do sistema que mostra
+                  fila, workers, agendador e agentes online.
+                </p>
+              </article>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Habilidades -->
-      <section id="habilidades" class="section section-dark">
-        <div class="container">
-          <div class="section-title">
-            <p>02. TECNOLOGIAS</p>
-
-            <h2>
-              Ferramentas utilizadas
-              <span>no desenvolvimento.</span>
-            </h2>
+      <!-- ================= PROJETOS ================= -->
+      <section class="section alt" id="projetos">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">ls projetos/</p>
+            <h2>Mais do que scripts soltos</h2>
+            <p>
+              Projetos maiores em Django e automações em Python com
+              arquitetura: Page Object, SOLID, códigos de saída e logs
+              estruturados.
+            </p>
           </div>
 
-          <div class="skills-grid">
-            <article class="skill-card">
-              <div class="skill-icon">🐍</div>
-
-              <h3>Python</h3>
-
-              <p>
-                Desenvolvimento de automações, aplicações, scripts, APIs e
-                processamento de dados.
-              </p>
-            </article>
-
-            <article class="skill-card">
-              <div class="skill-icon">🤖</div>
-
-              <h3>RPA</h3>
-
-              <p>
-                Automação de processos repetitivos, integração de sistemas e
-                execução de fluxos.
-              </p>
-            </article>
-
-            <article class="skill-card">
-              <div class="skill-icon">🌐</div>
-
-              <h3>Playwright</h3>
-
-              <p>
-                Automação web moderna utilizando Page Objects e testes
-                automatizados.
-              </p>
-            </article>
-
-            <article class="skill-card">
-              <div class="skill-icon">📊</div>
-
-              <h3>Pandas</h3>
-
-              <p>
-                Tratamento, transformação e análise de dados em Excel e CSV.
-              </p>
-            </article>
-
-            <article class="skill-card">
-              <div class="skill-icon">🗄️</div>
-
-              <h3>SQL</h3>
-
-              <p>
-                Consultas, filtros, análise e integração com bancos de dados.
-              </p>
-            </article>
-
-            <article class="skill-card">
-              <div class="skill-icon">🐳</div>
-
-              <h3>Docker</h3>
-
-              <p>Containerização de aplicações e padronização de ambientes.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projetos -->
-      <section id="projetos" class="section">
-        <div class="container">
-          <div class="section-title">
-            <p>03. PROJETOS</p>
-
-            <h2>
-              Soluções desenvolvidas
-              <span>com foco em automação.</span>
-            </h2>
+          <div class="filters" role="group" aria-label="Filtrar projetos">
+            <button class="chip" data-f="todos" aria-pressed="true">Todos</button>
+            <button class="chip" data-f="django" aria-pressed="false">Django / Backend</button>
+            <button class="chip" data-f="rpa" aria-pressed="false">RPA</button>
+            <button class="chip" data-f="dados" aria-pressed="false">Dados</button>
           </div>
 
-          <div class="projects-grid">
-            <article class="project-card">
-              <div class="project-number">PROJETO 01</div>
-
-              <h3>Automação de Download via CRM</h3>
-
-              <p>
-                Automação desenvolvida em Python para acessar sistemas, executar
-                processos e realizar o download automatizado de arquivos.
-              </p>
-
-              <div class="tags">
-                <span>Python</span>
-
-                <span>Playwright</span>
-
-                <span>RPA</span>
+          <div class="projects">
+            <article class="pcard reveal" data-c="django">
+              <div class="pmeta">
+                <span>blog-zvlabs</span>
+                <span class="state wip">em desenvolvimento</span>
               </div>
-
-              <a
-                href="https://github.com/Zavan7/Automa-o-Download-via-CRM"
-                target="_blank"
-                class="project-link"
-              >
-                Ver projeto →
-              </a>
+              <h3>Blog ZV Labs</h3>
+              <p>
+                Blog em Django com posts em Markdown sanitizado, login só por
+                OAuth 2.0 (Google e GitHub), comentários com moderação e e-mail
+                automático para inscritos a cada post.
+              </p>
+              <div class="tags">
+                <span class="tag">Django</span>
+                <span class="tag">allauth</span>
+                <span class="tag">OAuth 2.0</span>
+                <span class="tag">nh3</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/blog-zvlabs" target="_blank" rel="noopener">repositório →</a>
             </article>
 
-            <article class="project-card">
-              <div class="project-number">PROJETO 02</div>
-
-              <h3>Desafio de automação WEB</h3>
-
-              <p>
-                Desafio RPA utilizando Playwright, enfrentando desafios de
-                timestamp, Exceptions variadas
-              </p>
-
-              <div class="tags">
-                <span>Python</span>
-
-                <span>Pandas</span>
-
-                <span>OpenPyXL</span>
+            <article class="pcard reveal" data-c="django">
+              <div class="pmeta">
+                <span>e-comerce</span>
+                <span class="state wip">em construção</span>
               </div>
-
-              <a
-                href="https://github.com/Zavan7/desafio_rpa_cinco"
-                target="_blank"
-                class="project-link"
-              >
-                Ver projeto →
-              </a>
+              <h3>E-commerce de joias</h3>
+              <p>
+                Loja em Django com cadastro de clientes, integração com API de
+                pagamento e foco em segurança e arquitetura escalável.
+              </p>
+              <div class="tags">
+                <span class="tag">Django</span>
+                <span class="tag">Pagamentos</span>
+                <span class="tag">Segurança</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/e-comerce" target="_blank" rel="noopener">repositório →</a>
             </article>
 
-            <article class="project-card">
-              <div class="project-number">PROJETO 03</div>
-
-              <h3>RPA Challenge</h3>
-
-              <p>
-                Projeto focado na resolução de desafios de automação web
-                utilizando Python, Playwright e arquitetura Page Object.
-              </p>
-
-              <div class="tags">
-                <span>Python</span>
-
-                <span>Playwright</span>
-
-                <span>Page Object</span>
+            <article class="pcard reveal" data-c="django">
+              <div class="pmeta">
+                <span>Eco</span>
+                <span class="state wip">em desenvolvimento</span>
               </div>
-
-              <a
-                href="https://github.com/Zavan7/RPA-Challenge-2.0"
-                target="_blank"
-                class="project-link"
-              >
-                Ver projeto →
-              </a>
+              <h3>Eco: microsserviço de notificações</h3>
+              <p>
+                Serviço em FastAPI que centraliza os avisos do Maestro. O
+                primeiro passo é o e-mail de falha definitiva do robô, já
+                pensado para migrar para o serviço.
+              </p>
+              <div class="tags">
+                <span class="tag">FastAPI</span>
+                <span class="tag">Microsserviço</span>
+                <span class="tag">Maestro</span>
+              </div>
+              <span class="go off">sem repositório público ainda</span>
             </article>
 
-            <article class="project-card">
-              <div class="project-number">PROJETO 04</div>
+            <article class="pcard reveal" data-c="rpa">
+              <div class="pmeta">
+                <span>desafio_rpa_seis</span>
+                <span class="state">atualizado em nov/2026</span>
+              </div>
+              <h3>RPA com SOLID (SRP)</h3>
+              <p>
+                Robô em Playwright que aplica Responsabilidade Única de ponta a
+                ponta: configuração de navegador, serviço, Page Objects e
+                tratamento de erros que vira código de saída para o
+                orquestrador.
+              </p>
+              <div class="tags">
+                <span class="tag">Playwright</span>
+                <span class="tag">Page Object</span>
+                <span class="tag">SOLID</span>
+                <span class="tag">logs JSON</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/desafio_rpa_seis" target="_blank" rel="noopener">repositório →</a>
+            </article>
 
+            <article class="pcard reveal" data-c="rpa">
+              <div class="pmeta">
+                <span>RPA-Challenge-3.0</span>
+                <span class="state">atualizado em set/2026</span>
+              </div>
+              <h3>RPA Challenge 3.0</h3>
+              <p>
+                Terceira etapa da minha série de desafios de automação web em
+                Python, evoluindo a organização do código a cada versão.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Playwright</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/RPA-Challenge-3.0" target="_blank" rel="noopener">repositório →</a>
+            </article>
+
+            <article class="pcard reveal" data-c="rpa">
+              <div class="pmeta">
+                <span>rpa_poo</span>
+                <span class="state">atualizado em jun/2026</span>
+              </div>
+              <h3>RPA com orientação a objetos</h3>
+              <p>
+                Estudo de RPA com programação orientada a objetos: classes com
+                responsabilidades claras no lugar de um script único e longo.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">POO</span>
+                <span class="tag">Clean Code</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/rpa_poo" target="_blank" rel="noopener">repositório →</a>
+            </article>
+
+            <article class="pcard reveal" data-c="rpa dados">
+              <div class="pmeta">
+                <span>Automa-o-Download-via-CRM</span>
+                <span class="state">atualizado em nov/2025</span>
+              </div>
+              <h3>Download automatizado via CRM</h3>
+              <p>
+                Robô que acessa o CRM, executa o fluxo e baixa os arquivos
+                automaticamente, eliminando um processo manual repetitivo.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Playwright</span>
+                <span class="tag">RPA</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/Automa-o-Download-via-CRM" target="_blank" rel="noopener">repositório →</a>
+            </article>
+
+            <article class="pcard reveal" data-c="rpa dados">
+              <div class="pmeta">
+                <span>TesteRPA</span>
+                <span class="state">atualizado em dez/2024</span>
+              </div>
               <h3>Monitoramento com MongoDB</h3>
-
               <p>
-                Sistema de monitoramento para registrar execuções, armazenar
-                logs e acompanhar o status das automações.
+                Registro de execuções, logs e status das automações em
+                MongoDB, rodando em containers Docker.
               </p>
-
               <div class="tags">
-                <span>MongoDB</span>
-
-                <span>Docker</span>
-
-                <span>Logging</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">Docker</span>
+                <span class="tag">Logging</span>
               </div>
-
-              <a
-                href="https://github.com/Zavan7/TesteRPA"
-                target="_blank"
-                class="project-link"
-              >
-                Ver projeto →
-              </a>
+              <a class="go" href="https://github.com/Zavan7/TesteRPA" target="_blank" rel="noopener">repositório →</a>
             </article>
+
+            <article class="pcard reveal" data-c="rpa">
+              <div class="pmeta">
+                <span>RPA-Challenge-2.0</span>
+                <span class="state">atualizado em dez/2025</span>
+              </div>
+              <h3>RPA Challenge 2.0</h3>
+              <p>
+                Resolução de desafios de automação web com Python, Playwright e
+                arquitetura Page Object.
+              </p>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Playwright</span>
+                <span class="tag">Page Object</span>
+              </div>
+              <a class="go" href="https://github.com/Zavan7/RPA-Challenge-2.0" target="_blank" rel="noopener">repositório →</a>
+            </article>
+          </div>
+
+          <div class="term activity reveal" id="activity" hidden>
+            <div class="term-bar">
+              <div class="dots"><i></i><i></i><i></i></div>
+              <span class="term-title">~/github $ atividade recente (ao vivo, via API pública)</span>
+            </div>
+            <div class="term-body" id="activityBody"></div>
           </div>
         </div>
       </section>
 
-      <!-- Experiência -->
-      <section id="experiencia" class="section section-dark">
-        <div class="container">
-          <div class="section-title">
-            <p>04. EXPERIÊNCIA</p>
-
-            <h2>
-              Construindo soluções
-              <span>orientadas ao negócio.</span>
-            </h2>
+      <!-- ================= STACK ================= -->
+      <section class="section" id="stack">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">cat stack.txt</p>
+            <h2>Ferramentas que uso de verdade</h2>
           </div>
 
-          <div class="experience-card">
-            <div class="experience-date">
-              <span>2025</span>
-
-              <div></div>
-
-              <span>Atual</span>
+          <div class="stack">
+            <div class="panel scard reveal">
+              <h3>Linguagens</h3>
+              <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Go (agente do Maestro)</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">HTML / CSS</span>
+              </div>
             </div>
 
-            <div class="experience-content">
-              <p class="company">HCosta</p>
+            <div class="panel scard reveal">
+              <h3>Automação e RPA</h3>
+              <div class="tags">
+                <span class="tag">Playwright</span>
+                <span class="tag">Selenium</span>
+                <span class="tag">Page Object</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">OpenPyXL</span>
+              </div>
+            </div>
 
-              <h3>Assistente de Control Desk</h3>
+            <div class="panel scard reveal">
+              <h3>Backend</h3>
+              <div class="tags">
+                <span class="tag">Django</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">Celery</span>
+                <span class="tag">Channels</span>
+                <span class="tag">OAuth 2.0</span>
+              </div>
+            </div>
 
+            <div class="panel scard reveal">
+              <h3>Dados</h3>
+              <div class="tags">
+                <span class="tag">SQL</span>
+                <span class="tag">MongoDB</span>
+                <span class="tag">SQLite</span>
+                <span class="tag">Redis</span>
+              </div>
+            </div>
+
+            <div class="panel scard reveal">
+              <h3>Infra e ferramentas</h3>
+              <div class="tags">
+                <span class="tag">Docker / Compose</span>
+                <span class="tag">Linux (Ubuntu)</span>
+                <span class="tag">Git / GitHub</span>
+                <span class="tag">uv</span>
+              </div>
+            </div>
+
+            <div class="panel scard reveal">
+              <h3>Práticas</h3>
+              <div class="tags">
+                <span class="tag">Clean Code</span>
+                <span class="tag">SOLID</span>
+                <span class="tag">Testes</span>
+                <span class="tag">Segurança</span>
+                <span class="tag">Changelog / SemVer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TRAJETÓRIA ================= -->
+      <section class="section alt" id="trajetoria">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">git log --oneline</p>
+            <h2>Uma curva de evolução constante</h2>
+            <p>
+              De scripts de RPA a um orquestrador com agente próprio. Cada
+              etapa ficou registrada em repositório público.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <div class="step now reveal">
+              <time>2026 · agora</time>
+              <h3>Maestro 1.1, Blog, Eco e a marca ZV Labs</h3>
               <p>
-                Desenvolvimento e manutenção de automações para processos
-                críticos, criação de consultas SQL, tratamento de dados e
-                implementação de soluções utilizando Python e ferramentas de
-                RPA.
+                Orquestrador com log ao vivo, agentes em Go, agendamento e
+                varredura de segurança. Em paralelo, blog em Django com OAuth,
+                o microsserviço Eco e um e-commerce.
               </p>
+            </div>
 
+            <div class="step reveal">
+              <time>2026</time>
+              <h3>Arquitetura aplicada à automação</h3>
+              <p>
+                Série de desafios RPA com Page Object, POO e SOLID. Foco em
+                código que outra pessoa consegue manter.
+              </p>
+            </div>
+
+            <div class="step reveal">
+              <time>2025 → hoje</time>
+              <h3>Assistente de Control Desk · HCosta</h3>
+              <p>
+                Automações para processos críticos, consultas SQL, tratamento e
+                consolidação de dados, relatórios automatizados e
+                monitoramento das execuções.
+              </p>
               <ul>
-                <li>Desenvolvimento e acompanhamento estratégico.</li>
-
-                <li>Criação e manutenção de relatórios automatizados.</li>
-
-                <li>Tratamento e consolidação de dados.</li>
-
-                <li>Criação e otimização de consultas SQL.</li>
-
-                <li>Monitoramento e registro de execuções.</li>
+                <li>Python e RPA em operação real</li>
+                <li>Consultas SQL e métricas</li>
+                <li>Relatórios automatizados</li>
+                <li>Registro de execuções</li>
               </ul>
             </div>
+
+            <div class="step reveal">
+              <time>em andamento</time>
+              <h3>Análise e Desenvolvimento de Sistemas (ADS)</h3>
+              <p>
+                Graduação em paralelo à prática: estudo diário de Python,
+                Linux, segurança e engenharia de software.
+              </p>
+            </div>
+
+            <div class="step reveal">
+              <time>2024</time>
+              <h3>Primeiros robôs</h3>
+              <p>
+                Começo com RPA em Python e primeiros experimentos com
+                monitoramento em MongoDB.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Contato -->
-      <section id="contato" class="contact">
-        <div class="container contact-content">
-          <p>05. CONTATO</p>
+      <!-- ================= CERTIFICADOS ================= -->
+      <section class="section" id="certificados">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <p class="eyebrow">ls certificados/</p>
+            <h2>Estudo contínuo, com comprovante</h2>
+            <p>
+              Cursos e certificações que vou concluindo. A lista completa e
+              verificável fica no meu LinkedIn.
+            </p>
+          </div>
 
-          <h2>
-            Vamos construir
-            <span>algo eficiente?</span>
-          </h2>
+          <div class="certs" id="certGrid"></div>
 
-          <p class="contact-description">
-            Estou disponível para conversar sobre automação, RPA, Python e
-            desenvolvimento de soluções.
-          </p>
-
-          <div class="contact-buttons">
+          <div class="cert-cta reveal">
+            <p>
+              <b>Todos os certificados no LinkedIn.</b> Lá cada curso aparece
+              com emissor, data e link de credencial, e a lista cresce a cada
+              conclusão.
+            </p>
             <a
-              href="mailto:vitorzavanj@gmail.com"
-              class="button button-primary"
-            >
-              Enviar e-mail
-            </a>
-
-            <a
-              href="https://github.com/Zavan7"
-              target="_blank"
-              class="button button-secondary"
-            >
-              GitHub
-            </a>
-
-            <a
+              class="btn btn-primary"
               href="https://www.linkedin.com/in/vitor-zavan-831907297/"
               target="_blank"
-              class="button button-secondary"
+              rel="noopener"
+              >Ver no LinkedIn →</a
             >
-              LinkedIn
-            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ZV LABS ================= -->
+      <section class="section alt">
+        <div class="wrap labs">
+          <div class="reveal">
+            <p class="eyebrow">zv labs</p>
+            <h2>Um laboratório para aprender construindo</h2>
+            <p>
+              A ZV Labs é a marca sob a qual publico o que estudo e crio:
+              Maestro, Eco, blog e uma coleção de livros técnicos autorais.
+              Python, Linux, segurança e RPA, sempre com projeto real por trás.
+            </p>
+            <div class="links">
+              <a class="btn" href="https://github.com/Zavan7/blog-zvlabs" target="_blank" rel="noopener">Código do blog</a>
+              <a class="btn" href="https://github.com/Zavan7/maestro-zavan" target="_blank" rel="noopener">Código do Maestro</a>
+            </div>
+          </div>
+
+          <div class="term reveal">
+            <div class="term-bar">
+              <div class="dots"><i></i><i></i><i></i></div>
+              <span class="term-title">zvlabs.txt</span>
+            </div>
+            <div class="term-body">
+              <span class="ln"><span class="c-muted">#</span> filosofia</span>
+              <span class="ln"><span class="c-acc">ideias</span>   → viram protótipos</span>
+              <span class="ln"><span class="c-acc">erros</span>    → viram documentação</span>
+              <span class="ln"><span class="c-acc">projetos</span> → viram aprendizado</span>
+              <span class="ln"><span class="c-ok">✔</span> foco: Python · Linux · segurança · RPA</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= CONTATO ================= -->
+      <section class="section contact" id="contato">
+        <div class="wrap">
+          <p class="eyebrow reveal">contato</p>
+          <h2 class="reveal">Tem um processo manual que <em>merece um robô?</em></h2>
+          <p class="reveal">
+            Vamos conversar sobre automação, RPA, Python e backend. Respondo
+            por e-mail e pelo LinkedIn.
+          </p>
+          <div class="cta reveal">
+            <a class="btn btn-primary" href="mailto:vitorzavanj@gmail.com">vitorzavanj@gmail.com</a>
+            <a class="btn" href="https://www.linkedin.com/in/vitor-zavan-831907297/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/Zavan7" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Rodapé -->
-    <footer>
-      <p>
-        Desenvolvido por
-        <strong>Vitor Zavan</strong>
-        utilizando HTML e CSS.
-      </p>
-
-      <p>© 2026</p>
+    <footer class="footer">
+      <div class="wrap">
+        <span>© 2026 Vitor Zavan · ZV Labs</span>
+        <span>HTML, CSS e JS puros · hospedado no GitHub Pages</span>
+        <a href="#inicio">voltar ao topo ↑</a>
+      </div>
     </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
